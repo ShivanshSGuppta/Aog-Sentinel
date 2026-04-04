@@ -16,13 +16,17 @@ backend/**/*.pyc
 
 # Env
 .env
-.env.*
 **/.env
-**/.env.*
 frontend/.env.local
 frontend/.env*.local
 backend/.env
 backend/.env*.local
+backend/.env.production
+frontend/.env.production
+
+# Keep example env templates in version control
+!**/.env.example
+!**/.env.production.example
 
 # Logs
 *.log
