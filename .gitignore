@@ -29,5 +29,6 @@ backend/.env*.local
 *.pid
 
 # Runtime DB artifacts
+*.db
 *.sqlite
 *.sqlite3
