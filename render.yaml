@@ -1,0 +1,132 @@
+services:
+  - type: web
+    name: aog-sentinel-frontend
+    runtime: docker
+    dockerContext: ./frontend
+    dockerfilePath: ./frontend/Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: NEXT_PUBLIC_API_BASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_FLIGHTS_MAP_STYLE_URL
+        value: ""
+      - key: NEXT_PUBLIC_FLIGHTS_3D_TILE_URL
+        value: ""
+
+  - type: web
+    name: aog-sentinel-backend
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /health
+    preDeployCommand: python -m alembic upgrade head
+    envVars:
+      - key: AOG_ENV
+        value: production
+      - key: AOG_DATA_DIR
+        value: /app/data
+      - key: AOG_DATABASE_URL
+        fromDatabase:
+          name: aog-sentinel-postgres
+          property: connectionString
+      - key: AOG_ALLOWED_ORIGINS
+        sync: false
+      - key: AOG_ALLOWED_ORIGIN_REGEX
+        value: ""
+      - key: AOG_SQL_ECHO
+        value: "false"
+      - key: AOG_JWT_SECRET_KEY
+        sync: false
+      - key: AOG_JWT_ALGORITHM
+        value: HS256
+      - key: AOG_ACCESS_TOKEN_MINUTES
+        value: "20"
+      - key: AOG_REFRESH_TOKEN_DAYS
+        value: "14"
+      - key: AOG_ENABLE_API_DOCS
+        value: "false"
+      - key: AOG_BOOTSTRAP_PLATFORM_DATA
+        value: "true"
+      - key: AOG_BOOTSTRAP_DEFAULT_PASSWORD
+        sync: false
+      - key: AOG_BOOTSTRAP_ADMIN_EMAIL
+        value: platform.admin@aogsentinel.local
+      - key: AOG_BOOTSTRAP_ADMIN_NAME
+        value: Platform Administrator
+      - key: AOG_DOC_MODEL
+        value: all-MiniLM-L6-v2
+      - key: AOG_DOCS_FORCE_FALLBACK
+        value: "false"
+      - key: OPENSKY_USERNAME
+        sync: false
+      - key: OPENSKY_PASSWORD
+        sync: false
+      - key: FLIGHTS_CACHE_TTL_SECONDS
+        value: "20"
+      - key: FLIGHTS_DEFAULT_LIMIT
+        value: "250"
+      - key: WEATHER_CACHE_TTL_SECONDS
+        value: "900"
+      - key: AOG_CONNECTOR_WORKER_POLL_SECONDS
+        value: "10"
+      - key: AOG_CONNECTOR_SYNC_INLINE
+        value: "false"
+
+  - type: worker
+    name: aog-sentinel-connector-worker
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    dockerCommand: python -m app.workers.connector_worker
+    envVars:
+      - key: AOG_ENV
+        value: production
+      - key: AOG_DATA_DIR
+        value: /app/data
+      - key: AOG_DATABASE_URL
+        fromDatabase:
+          name: aog-sentinel-postgres
+          property: connectionString
+      - key: AOG_SQL_ECHO
+        value: "false"
+      - key: AOG_JWT_SECRET_KEY
+        sync: false
+      - key: AOG_JWT_ALGORITHM
+        value: HS256
+      - key: AOG_ACCESS_TOKEN_MINUTES
+        value: "20"
+      - key: AOG_REFRESH_TOKEN_DAYS
+        value: "14"
+      - key: AOG_ENABLE_API_DOCS
+        value: "false"
+      - key: AOG_BOOTSTRAP_PLATFORM_DATA
+        value: "true"
+      - key: AOG_BOOTSTRAP_DEFAULT_PASSWORD
+        sync: false
+      - key: AOG_BOOTSTRAP_ADMIN_EMAIL
+        value: platform.admin@aogsentinel.local
+      - key: AOG_BOOTSTRAP_ADMIN_NAME
+        value: Platform Administrator
+      - key: AOG_DOC_MODEL
+        value: all-MiniLM-L6-v2
+      - key: AOG_DOCS_FORCE_FALLBACK
+        value: "false"
+      - key: OPENSKY_USERNAME
+        sync: false
+      - key: OPENSKY_PASSWORD
+        sync: false
+      - key: FLIGHTS_CACHE_TTL_SECONDS
+        value: "20"
+      - key: FLIGHTS_DEFAULT_LIMIT
+        value: "250"
+      - key: WEATHER_CACHE_TTL_SECONDS
+        value: "900"
+      - key: AOG_CONNECTOR_WORKER_POLL_SECONDS
+        value: "10"
+      - key: AOG_CONNECTOR_SYNC_INLINE
+        value: "false"
+
+databases:
+  - name: aog-sentinel-postgres
+    databaseName: aogsentinel
+    user: aogsentinel

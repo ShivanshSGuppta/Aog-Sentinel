@@ -1,0 +1,101 @@
+log_id,aircraft_id,date,task_type,component,scheduled_unscheduled,manhours,doc_ref,outcome
+LOG0001,AC010,2025-04-01,Functional Check,Nose Gear Steering Control Valve,Unscheduled,5.2,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Returned to service
+LOG0003,AC001,2025-04-01,Functional Check,IRS Cooling Fan,Unscheduled,5.3,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Repeat check scheduled
+LOG0059,AC003,2025-04-01,Leak Rectification,Nose Gear Steering Control Valve,Unscheduled,4.6,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Repeat check scheduled
+LOG0098,AC008,2025-04-01,Functional Check,Brake Temperature Monitoring Unit,Unscheduled,3.2,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Repeat check scheduled
+LOG0029,AC009,2025-04-02,Troubleshooting,Brake Temperature Monitoring Unit,Unscheduled,4.5,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Further troubleshooting required
+LOG0046,AC008,2025-04-02,Inspection,Brake Temperature Monitoring Unit,Unscheduled,5.5,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Component replaced and closed
+LOG0006,AC012,2025-04-07,Troubleshooting,Satcom Transceiver,Scheduled,3.3,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Repeat check scheduled
+LOG0040,AC006,2025-04-11,Component Replacement,Main Gear Hydraulic Line Kit,Scheduled,0.8,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0023,AC010,2025-04-17,MEL Review,Cabin Pressure Controller,Unscheduled,5.5,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Returned to service
+LOG0020,AC003,2025-04-18,Functional Check,Brake Temperature Monitoring Unit,Scheduled,4.1,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0041,AC009,2025-04-18,Inspection,VHF Control Panel,Scheduled,6.6,MEL_IFE_Summary.txt - Dispatch Conditions,Component replaced and closed
+LOG0034,AC004,2025-04-19,Leak Rectification,Spoiler Control Actuator,Unscheduled,8.5,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0063,AC006,2025-04-19,Component Replacement,Pack Flow Control Valve,Scheduled,6.0,MEL_IFE_Summary.txt - Dispatch Conditions,Component replaced and closed
+LOG0017,AC010,2025-04-21,Inspection,IFE Seat Electronics Box,Scheduled,2.8,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Deferred under MEL
+LOG0028,AC004,2025-04-24,Component Replacement,Brake Temperature Monitoring Unit,Unscheduled,5.7,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0084,AC005,2025-04-28,Inspection,Hydraulic Reservoir Sensor,Scheduled,2.0,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Deferred under MEL
+LOG0093,AC004,2025-05-08,Inspection,APU Starter Controller,Scheduled,2.8,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Fault isolated and monitored
+LOG0057,AC004,2025-05-09,Component Replacement,Central Maintenance Display Module,Unscheduled,3.5,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0027,AC004,2025-05-14,Leak Rectification,APU Starter Controller,Unscheduled,5.7,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Repeat check scheduled
+LOG0082,AC011,2025-05-20,BITE Test,APU Fuel Control Unit,Unscheduled,2.8,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Fault isolated and monitored
+LOG0039,AC005,2025-05-24,BITE Test,Main Gear Hydraulic Line Kit,Scheduled,0.8,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Repeat check scheduled
+LOG0002,AC004,2025-05-27,Inspection,IRS Cooling Fan,Scheduled,4.8,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0043,AC007,2025-05-27,Functional Check,Hydraulic Reservoir Sensor,Unscheduled,9.0,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Deferred under MEL
+LOG0050,AC008,2025-05-27,BITE Test,Autothrust Servo Module,Scheduled,7.4,MEL_IFE_Summary.txt - Dispatch Conditions,Further troubleshooting required
+LOG0036,AC003,2025-05-29,Functional Check,Autothrust Servo Module,Unscheduled,8.6,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0009,AC004,2025-05-31,BITE Test,Cabin Pressure Controller,Unscheduled,5.9,MEL_IFE_Summary.txt - Dispatch Conditions,Repeat check scheduled
+LOG0013,AC005,2025-06-02,Operational Check,APU Fuel Control Unit,Unscheduled,5.5,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Deferred under MEL
+LOG0007,AC009,2025-06-07,Troubleshooting,Static Inverter,Scheduled,5.5,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Fault isolated and monitored
+LOG0052,AC004,2025-06-09,Inspection,Main Gear Hydraulic Line Kit,Scheduled,3.3,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Deferred under MEL
+LOG0083,AC008,2025-06-09,Functional Check,Elevator Position Sensor,Scheduled,2.5,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Further troubleshooting required
+LOG0075,AC012,2025-06-10,Operational Check,Vacuum Waste Interface Valve,Unscheduled,4.0,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Repeat check scheduled
+LOG0077,AC005,2025-06-10,BITE Test,Galley Power Control Unit,Scheduled,3.0,MEL_IFE_Summary.txt - Dispatch Conditions,Fault isolated and monitored
+LOG0033,AC004,2025-06-17,MEL Review,APU Fuel Control Unit,Scheduled,5.3,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Returned to service
+LOG0097,AC001,2025-06-18,BITE Test,Autothrust Servo Module,Unscheduled,3.2,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Further troubleshooting required
+LOG0018,AC005,2025-06-26,Operational Check,Nose Gear Steering Control Valve,Unscheduled,4.1,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Returned to service
+LOG0092,AC009,2025-07-01,BITE Test,Static Inverter,Scheduled,2.2,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Returned to service
+LOG0030,AC009,2025-07-02,BITE Test,Transformer Rectifier Unit,Unscheduled,3.6,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Repeat check scheduled
+LOG0011,AC004,2025-07-10,MEL Review,Autopilot Flight Control Computer,Scheduled,4.6,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Deferred under MEL
+LOG0014,AC008,2025-07-12,Inspection,Transformer Rectifier Unit,Scheduled,2.7,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0074,AC003,2025-07-13,Inspection,Autopilot Flight Control Computer,Unscheduled,6.2,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Further troubleshooting required
+LOG0071,AC010,2025-07-18,Inspection,Spoiler Control Actuator,Scheduled,1.4,MEL_IFE_Summary.txt - Dispatch Conditions,Further troubleshooting required
+LOG0065,AC008,2025-07-19,Troubleshooting,Brake Control Unit,Unscheduled,7.2,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Component replaced and closed
+LOG0005,AC001,2025-07-20,Troubleshooting,Hydraulic Reservoir Sensor,Unscheduled,7.0,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0073,AC012,2025-07-21,Component Replacement,APU Starter Controller,Unscheduled,5.2,MEL_IFE_Summary.txt - Dispatch Conditions,Component replaced and closed
+LOG0032,AC006,2025-07-25,Operational Check,Brake Control Unit,Unscheduled,5.4,MEL_IFE_Summary.txt - Dispatch Conditions,Further troubleshooting required
+LOG0022,AC011,2025-08-03,Operational Check,Brake Control Unit,Unscheduled,5.6,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Fault isolated and monitored
+LOG0026,AC009,2025-08-07,Troubleshooting,Autopilot Flight Control Computer,Unscheduled,4.5,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Fault isolated and monitored
+LOG0100,AC010,2025-08-09,Component Replacement,APU Starter Controller,Unscheduled,4.9,MEL_IFE_Summary.txt - Dispatch Conditions,Component replaced and closed
+LOG0069,AC007,2025-08-18,Component Replacement,IFE Seat Electronics Box,Scheduled,1.6,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0021,AC012,2025-08-19,MEL Review,IRS Cooling Fan,Unscheduled,5.2,MEL_IFE_Summary.txt - Dispatch Conditions,Deferred under MEL
+LOG0025,AC001,2025-08-19,MEL Review,Spoiler Control Actuator,Unscheduled,4.2,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Fault isolated and monitored
+LOG0085,AC011,2025-08-24,Functional Check,Autothrust Servo Module,Unscheduled,4.5,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Repeat check scheduled
+LOG0004,AC003,2025-08-27,Inspection,Autothrust Servo Module,Scheduled,4.1,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Deferred under MEL
+LOG0072,AC001,2025-08-30,Troubleshooting,Satcom Transceiver,Unscheduled,6.2,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Repeat check scheduled
+LOG0045,AC012,2025-09-01,BITE Test,FMS CDU,Unscheduled,4.5,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Repeat check scheduled
+LOG0037,AC012,2025-09-06,MEL Review,VHF Control Panel,Scheduled,3.8,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Further troubleshooting required
+LOG0087,AC009,2025-09-09,Leak Rectification,Autothrust Servo Module,Scheduled,1.7,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Returned to service
+LOG0016,AC010,2025-09-10,Troubleshooting,Brake Control Unit,Scheduled,3.3,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Fault isolated and monitored
+LOG0067,AC012,2025-09-10,Functional Check,Spoiler Control Actuator,Unscheduled,4.2,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Further troubleshooting required
+LOG0042,AC007,2025-09-13,Operational Check,Autothrust Servo Module,Scheduled,5.8,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Deferred under MEL
+LOG0054,AC010,2025-09-14,Leak Rectification,Transformer Rectifier Unit,Scheduled,2.2,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Repeat check scheduled
+LOG0015,AC004,2025-09-23,Troubleshooting,APU Fuel Control Unit,Scheduled,0.8,MEL_IFE_Summary.txt - Dispatch Conditions,Repeat check scheduled
+LOG0066,AC008,2025-09-23,Leak Rectification,APU Starter Controller,Unscheduled,6.2,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Fault isolated and monitored
+LOG0060,AC002,2025-09-24,Leak Rectification,APU Fuel Control Unit,Unscheduled,1.5,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Repeat check scheduled
+LOG0086,AC007,2025-09-26,Leak Rectification,Galley Power Control Unit,Scheduled,5.9,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Repeat check scheduled
+LOG0078,AC012,2025-10-02,Component Replacement,Nose Gear Steering Control Valve,Scheduled,0.8,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Component replaced and closed
+LOG0096,AC007,2025-10-05,Component Replacement,Potable Water Pump,Unscheduled,4.9,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0079,AC003,2025-10-07,Troubleshooting,Autopilot Flight Control Computer,Unscheduled,2.3,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Fault isolated and monitored
+LOG0049,AC011,2025-10-11,MEL Review,IFE Seat Electronics Box,Unscheduled,5.0,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Deferred under MEL
+LOG0068,AC007,2025-10-11,BITE Test,Spoiler Control Actuator,Unscheduled,2.5,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0070,AC007,2025-10-11,MEL Review,Autothrust Servo Module,Scheduled,2.8,Vendor_Bulletin_Hydraulics.txt - Inspection Criteria,Component replaced and closed
+LOG0055,AC003,2025-10-27,Component Replacement,Satcom Transceiver,Unscheduled,4.2,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Component replaced and closed
+LOG0044,AC004,2025-10-30,Inspection,Autopilot Flight Control Computer,Unscheduled,4.7,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Deferred under MEL
+LOG0061,AC006,2025-11-02,Component Replacement,Autothrust Servo Module,Scheduled,2.7,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0053,AC012,2025-11-09,Functional Check,Pack Flow Control Valve,Unscheduled,3.9,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Fault isolated and monitored
+LOG0010,AC005,2025-11-11,Functional Check,IRS Cooling Fan,Scheduled,3.7,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Further troubleshooting required
+LOG0080,AC009,2025-11-12,BITE Test,Galley Power Control Unit,Unscheduled,4.9,MEL_IFE_Summary.txt - Dispatch Conditions,Fault isolated and monitored
+LOG0089,AC012,2025-11-12,Component Replacement,APU Fuel Control Unit,Unscheduled,8.3,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Component replaced and closed
+LOG0062,AC009,2025-11-13,MEL Review,Cabin Pressure Controller,Unscheduled,6.2,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Component replaced and closed
+LOG0076,AC005,2025-11-13,BITE Test,Autopilot Flight Control Computer,Unscheduled,6.6,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Repeat check scheduled
+LOG0024,AC004,2025-11-19,Functional Check,APU Fuel Control Unit,Unscheduled,5.1,MEL_IFE_Summary.txt - Dispatch Conditions,Further troubleshooting required
+LOG0019,AC009,2025-11-21,Inspection,Hydraulic Reservoir Sensor,Scheduled,2.2,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0047,AC004,2025-11-21,BITE Test,Autothrust Servo Module,Unscheduled,4.6,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Further troubleshooting required
+LOG0090,AC008,2025-11-21,BITE Test,VHF Control Panel,Unscheduled,3.4,MEL_IFE_Summary.txt - Dispatch Conditions,Deferred under MEL
+LOG0012,AC012,2025-12-01,Functional Check,Hydraulic Reservoir Sensor,Scheduled,3.1,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Returned to service
+LOG0091,AC004,2025-12-04,Functional Check,Hydraulic Reservoir Sensor,Unscheduled,6.1,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0031,AC004,2025-12-06,Functional Check,APU Fuel Control Unit,Scheduled,1.8,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Deferred under MEL
+LOG0008,AC010,2025-12-08,Functional Check,Brake Control Unit,Unscheduled,7.4,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Returned to service
+LOG0099,AC009,2025-12-09,Leak Rectification,Hydraulic Reservoir Sensor,Scheduled,2.9,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Component replaced and closed
+LOG0081,AC010,2025-12-11,MEL Review,Nose Gear Steering Control Valve,Unscheduled,3.9,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Deferred under MEL
+LOG0058,AC011,2025-12-20,Operational Check,Cabin Pressure Controller,Unscheduled,5.2,Vendor_Bulletin_Hydraulics.txt - Leak Rectification,Component replaced and closed
+LOG0088,AC003,2026-01-04,BITE Test,Nose Gear Steering Control Valve,Unscheduled,2.8,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Fault isolated and monitored
+LOG0038,AC006,2026-01-11,Component Replacement,Hydraulic Reservoir Sensor,Unscheduled,4.4,MEL_IFE_Summary.txt - Dispatch Conditions,Component replaced and closed
+LOG0095,AC010,2026-01-14,Functional Check,Autothrust Servo Module,Scheduled,1.8,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Returned to service
+LOG0035,AC003,2026-02-05,Operational Check,Potable Water Pump,Unscheduled,6.0,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Deferred under MEL
+LOG0051,AC003,2026-02-05,MEL Review,Brake Control Unit,Unscheduled,3.2,Reliability_Procedure_Note.txt - Repeat Defect Escalation,Deferred under MEL
+LOG0056,AC009,2026-02-06,Operational Check,Cabin Pressure Controller,Unscheduled,6.1,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Deferred under MEL
+LOG0064,AC001,2026-02-15,Functional Check,Galley Power Control Unit,Unscheduled,4.0,AMM_A320_Autopilot_Excerpt.txt - Fault Isolation,Deferred under MEL
+LOG0094,AC006,2026-02-21,MEL Review,Central Maintenance Display Module,Unscheduled,3.6,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Further troubleshooting required
+LOG0048,AC009,2026-03-10,BITE Test,Brake Control Unit,Unscheduled,3.3,AMM_A320_Autopilot_Excerpt.txt - Operational Test,Component replaced and closed

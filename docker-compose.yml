@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: aog-sentinel-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: aogsentinel
+      POSTGRES_USER: aogsentinel
+      POSTGRES_PASSWORD: aogsentinel
+    volumes:
+      - aog_sentinel_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aogsentinel -d aogsentinel"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  aog_sentinel_postgres:

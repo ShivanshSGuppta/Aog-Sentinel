@@ -1,0 +1,14 @@
+[
+  {"airport_id": "ap_del", "iata_code": "DEL", "name": "Indira Gandhi International", "latitude": 28.5562, "longitude": 77.1},
+  {"airport_id": "ap_bom", "iata_code": "BOM", "name": "Chhatrapati Shivaji Maharaj International", "latitude": 19.0896, "longitude": 72.8656},
+  {"airport_id": "ap_blr", "iata_code": "BLR", "name": "Kempegowda International", "latitude": 13.1986, "longitude": 77.7066},
+  {"airport_id": "ap_hyd", "iata_code": "HYD", "name": "Rajiv Gandhi International", "latitude": 17.2403, "longitude": 78.4294},
+  {"airport_id": "ap_maa", "iata_code": "MAA", "name": "Chennai International", "latitude": 12.9941, "longitude": 80.1709},
+  {"airport_id": "ap_lhr", "iata_code": "LHR", "name": "London Heathrow", "latitude": 51.47, "longitude": -0.4543},
+  {"airport_id": "ap_dub", "iata_code": "DUB", "name": "Dublin Airport", "latitude": 53.4213, "longitude": -6.2701},
+  {"airport_id": "ap_jfk", "iata_code": "JFK", "name": "John F. Kennedy International", "latitude": 40.6413, "longitude": -73.7781},
+  {"airport_id": "ap_fra", "iata_code": "FRA", "name": "Frankfurt Airport", "latitude": 50.0379, "longitude": 8.5622},
+  {"airport_id": "ap_sin", "iata_code": "SIN", "name": "Singapore Changi", "latitude": 1.3644, "longitude": 103.9915},
+  {"airport_id": "ap_dxb", "iata_code": "DXB", "name": "Dubai International", "latitude": 25.2532, "longitude": 55.3657},
+  {"airport_id": "ap_hkg", "iata_code": "HKG", "name": "Hong Kong International", "latitude": 22.308, "longitude": 113.9185}
+]

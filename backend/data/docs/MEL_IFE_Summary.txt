@@ -1,0 +1,23 @@
+Passenger Display Limits
+
+Multiple inoperative IFE screens may be dispatched under MEL provisions provided the affected seats remain below the allowable cabin zone limit and no safety briefing functions are lost. Cabin services should be briefed before departure.
+
+Zone Concentration Guidance
+
+Concentrated IFE failures in a single seat block may indicate a seat electronics box or cabin distribution issue rather than isolated screen failures. Inspect power supply and network continuity for the affected zone.
+
+Operational Restrictions
+
+If inoperative screens affect premium cabin briefing monitors or moving map availability promised for dispatch, apply customer service notification and maintenance follow-up at next suitable station.
+
+Corrective Action Notes
+
+Repeated IFE resets on consecutive sectors should trigger seat electronics box replacement or software reload. Logging the exact seat rows helps identify harness or seat group commonality.
+
+Deferred Defect Control
+
+Deferred IFE defects must include the row, seat count, and any cabin crew observations of resets or spontaneous recoveries. Repeated defects should be reviewed during reliability meetings.
+
+Cabin Integration References
+
+For recurring inoperative displays associated with galley or cabin power resets, inspect shared power feeders and cabin utility contactors before replacing additional screens.

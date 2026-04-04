@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f8f9f7;
+  background-image:
+    radial-gradient(circle at top right, rgba(126, 215, 224, 0.18), transparent 32%),
+    linear-gradient(rgba(11, 32, 61, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 32, 61, 0.035) 1px, transparent 1px);
+  background-size: auto, 42px 42px, 42px 42px;
+  color: #0b203d;
+  font-family: var(--font-plex), ui-sans-serif, sans-serif;
+}
+
+::selection {
+  background: rgba(126, 215, 224, 0.45);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight text-ink-900;
+  }
+
+  p {
+    @apply text-slate-600;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-3xl border border-slate-200/90 bg-white/90 shadow-panel backdrop-blur;
+  }
+
+  .panel-muted {
+    @apply rounded-3xl border border-slate-200 bg-slate-50/90;
+  }
+
+  .subtle-grid {
+    background-image:
+      linear-gradient(rgba(11, 32, 61, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11, 32, 61, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}

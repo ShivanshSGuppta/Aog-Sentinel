@@ -1,0 +1,23 @@
+Fault Isolation Overview
+
+When an autopilot disconnect warning occurs during climb or managed descent, maintenance personnel should interrogate the flight control computer fault history before resetting the channel. Confirm whether the disconnect was accompanied by servo clutch, mode reversion, or pitch trim messages.
+
+BITE Review
+
+Use the built-in test equipment page for the autopilot flight control computer to capture active and stored fault codes. If the warning is intermittent, preserve maintenance data printout before removing electrical power from the aircraft.
+
+Connector Inspection
+
+Inspect cannon plugs at the flight control computer, associated pitch trim actuator interface, and flight control data concentrator. Evidence of fretting, moisture ingress, or loose backshell bonding should be corrected before further troubleshooting.
+
+Operational Test
+
+After corrective action, perform an autopilot engagement test in ground mode and verify no disconnect warning is generated when changing from selected to managed guidance. Record the test result in the maintenance log before return to service.
+
+Dispatch Guidance
+
+Repeated autopilot disconnect events within thirty days require engineering review even when the system passes a post-maintenance test. Review history for the same aircraft and for any swapped line-replaceable unit.
+
+Escalation Triggers
+
+If the fault recurs after component replacement, escalate to avionics engineering for software standard verification and fleet campaign review. Do not release the aircraft on repeated reset action alone.

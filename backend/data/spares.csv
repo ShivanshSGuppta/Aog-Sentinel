@@ -1,0 +1,25 @@
+part_id,component,vendor,current_stock,lead_time_days,avg_monthly_usage,criticality,reorder_threshold,unit_cost
+PN-2101,Cabin Pressure Controller,Honeywell,1,26,2.4,High,3,18500
+PN-2102,Pack Flow Control Valve,Parker,2,18,2.1,High,3,12200
+PN-2201,Autopilot Flight Control Computer,Collins,0,34,1.7,High,2,26400
+PN-2202,Autothrust Servo Module,Thales,3,29,1.5,High,2,23100
+PN-2301,VHF Control Panel,Collins,7,16,2.9,Medium,4,9800
+PN-2302,Satcom Transceiver,Honeywell,1,22,1.2,Medium,2,17400
+PN-2401,Transformer Rectifier Unit,Safran,5,21,2.7,High,3,14300
+PN-2402,Static Inverter,Thales,4,19,1.8,Medium,2,11200
+PN-2501,IFE Seat Electronics Box,Panasonic,11,12,5.6,Low,6,3200
+PN-2502,Galley Power Control Unit,Safran,8,14,3.3,Medium,4,5400
+PN-2701,Elevator Position Sensor,Thales,4,25,1.9,High,2,15800
+PN-2702,Spoiler Control Actuator,Parker,1,31,1.4,High,2,21900
+PN-2901,Hydraulic Reservoir Sensor,Parker,4,17,2.8,High,3,8700
+PN-2902,Main Gear Hydraulic Line Kit,Parker,2,23,2.2,High,3,13600
+PN-3101,Brake Temperature Monitoring Unit,Honeywell,4,15,2.0,Medium,3,9100
+PN-3102,Central Maintenance Display Module,Collins,3,20,1.6,Medium,2,12700
+PN-3201,Brake Control Unit,Safran,1,28,2.3,High,3,19400
+PN-3202,Nose Gear Steering Control Valve,Parker,3,24,1.8,High,2,16800
+PN-3401,FMS CDU,Honeywell,3,13,2.5,Medium,3,10400
+PN-3402,IRS Cooling Fan,Collins,5,17,1.9,Medium,2,7600
+PN-3801,Potable Water Pump,Safran,10,9,3.8,Low,5,2800
+PN-3802,Vacuum Waste Interface Valve,Lufthansa Technik,6,11,2.6,Low,4,3100
+PN-4901,APU Starter Controller,Honeywell,2,27,2.1,High,3,21100
+PN-4902,APU Fuel Control Unit,Honeywell,2,30,1.6,High,2,23700

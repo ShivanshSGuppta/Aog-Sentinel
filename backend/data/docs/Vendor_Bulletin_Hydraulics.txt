@@ -1,0 +1,23 @@
+Leak Identification
+
+Hydraulic leak observations near the main landing gear should differentiate between residual fluid from servicing and active seepage at hose assemblies, line clamps, or actuator fittings. Clean the area before pressurization and reinspect.
+
+Rectification Procedure
+
+When active leakage is confirmed on a hydraulic line kit, replace the affected hose assembly, torque fittings to the latest standard, replenish system quantity, and carry out an external leak check with gear cycling if permitted.
+
+Contamination Control
+
+Use approved lint-free materials around hydraulic fittings. Any evidence of particulate contamination after hose replacement requires filter inspection and possible fluid sampling before dispatch.
+
+Inspection Criteria
+
+A repeat leak on the same aircraft within thirty days should prompt clamp alignment review, bracket inspection, and engineering confirmation that the replacement line part number is correctly embodied.
+
+AOG Response
+
+If leakage exceeds allowable drip rate or affects brake or steering operation, treat the event as dispatch impacting and coordinate immediate material availability for replacement at the station.
+
+Vendor Recommendations
+
+Parker recommends replacing associated seals and verifying support clamp spacing whenever a main gear hydraulic line is changed following a leak event in service.

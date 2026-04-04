@@ -1,0 +1,917 @@
+{
+  "current_workspace_id": "ws_skybridge",
+  "environment": {
+    "control_plane_status": "Healthy",
+    "data_plane_status": "Healthy",
+    "event_bus_status": "Healthy",
+    "connector_worker_status": "Degraded",
+    "last_platform_sync": "2026-03-12T04:18:00Z",
+    "active_incidents": 1,
+    "degraded_connectors": 2,
+    "version": "1.3.0-control-plane"
+  },
+  "workspaces": [
+    {
+      "workspace_id": "ws_skybridge",
+      "airline_name": "SkyBridge Airways",
+      "airline_code": "SBX",
+      "status": "Active",
+      "deployment_mode": "Hybrid SaaS",
+      "primary_region": "South Asia",
+      "description": "Primary airline workspace used for connected engineering operations, spares visibility, and network intelligence.",
+      "branding": {
+        "primary_color": "#0B203D",
+        "accent_color": "#7ED7E0"
+      },
+      "fleets": [
+        {
+          "fleet_id": "flt_a320neo",
+          "fleet_name": "A320neo",
+          "aircraft_count": 18
+        },
+        {
+          "fleet_id": "flt_a321neo",
+          "fleet_name": "A321neo",
+          "aircraft_count": 14
+        },
+        {
+          "fleet_id": "flt_b787",
+          "fleet_name": "B787-8",
+          "aircraft_count": 6
+        }
+      ],
+      "sites": [
+        {
+          "site_id": "st_del",
+          "site_name": "Delhi Engineering Control",
+          "iata_code": "DEL",
+          "type": "Hub"
+        },
+        {
+          "site_id": "st_bom",
+          "site_name": "Mumbai Line Maintenance",
+          "iata_code": "BOM",
+          "type": "Line"
+        },
+        {
+          "site_id": "st_blr",
+          "site_name": "Bengaluru Reliability Cell",
+          "iata_code": "BLR",
+          "type": "Reliability"
+        },
+        {
+          "site_id": "st_hyd",
+          "site_name": "Hyderabad Spares Center",
+          "iata_code": "HYD",
+          "type": "Materials"
+        }
+      ],
+      "users": [
+        {
+          "user_id": "usr_ekta",
+          "name": "Ekta Rao",
+          "role": "Maintenance Control Lead",
+          "location": "DEL"
+        },
+        {
+          "user_id": "usr_rahul",
+          "name": "Rahul Menon",
+          "role": "Reliability Engineer",
+          "location": "BLR"
+        },
+        {
+          "user_id": "usr_priya",
+          "name": "Priya Singh",
+          "role": "Materials Planner",
+          "location": "HYD"
+        },
+        {
+          "user_id": "usr_dev",
+          "name": "Dev Malhotra",
+          "role": "Platform Admin",
+          "location": "DEL"
+        }
+      ]
+    },
+    {
+      "workspace_id": "ws_meridian",
+      "airline_name": "Meridian Atlantic",
+      "airline_code": "MDA",
+      "status": "Pilot",
+      "deployment_mode": "Hosted + Edge Connector",
+      "primary_region": "Europe",
+      "description": "Prospective airline tenant with connector validation and limited network overlay access.",
+      "branding": {
+        "primary_color": "#18212D",
+        "accent_color": "#7ED7E0"
+      },
+      "fleets": [
+        {
+          "fleet_id": "flt_a321",
+          "fleet_name": "A321",
+          "aircraft_count": 11
+        },
+        {
+          "fleet_id": "flt_b787_9",
+          "fleet_name": "B787-9",
+          "aircraft_count": 4
+        }
+      ],
+      "sites": [
+        {
+          "site_id": "st_lhr",
+          "site_name": "London Ops Center",
+          "iata_code": "LHR",
+          "type": "Hub"
+        },
+        {
+          "site_id": "st_dub",
+          "site_name": "Dublin Reliability Desk",
+          "iata_code": "DUB",
+          "type": "Reliability"
+        }
+      ],
+      "users": [
+        {
+          "user_id": "usr_alex",
+          "name": "Alex Byrne",
+          "role": "Engineering Director",
+          "location": "LHR"
+        },
+        {
+          "user_id": "usr_saoirse",
+          "name": "Saoirse Flynn",
+          "role": "Connector Admin",
+          "location": "DUB"
+        }
+      ]
+    }
+  ],
+  "connectors": [
+    {
+      "connector_id": "cn_amos_ops",
+      "workspace_id": "ws_skybridge",
+      "name": "AMOS M&E Core",
+      "source_category": "Maintenance",
+      "status": "Healthy",
+      "sync_mode": "Incremental",
+      "deployment_target": "Airline Edge Worker",
+      "runtime_location": "DEL Connector Node",
+      "package_name": "aog-connectors.amos",
+      "version": "0.9.4",
+      "schema_version": "2026.03",
+      "health_score": 96,
+      "last_sync": "2026-03-12T04:12:00Z",
+      "next_sync": "2026-03-12T04:17:00Z",
+      "supported_entities": [
+        "defects",
+        "maintenance_logs",
+        "work_packages",
+        "aircraft"
+      ],
+      "config_fields": [
+        {
+          "key": "base_url",
+          "label": "AMOS API URL",
+          "field_type": "string",
+          "required": true,
+          "secret": false,
+          "description": "Base AMOS endpoint"
+        },
+        {
+          "key": "client_id",
+          "label": "Client ID",
+          "field_type": "string",
+          "required": true,
+          "secret": false,
+          "description": "OAuth client id"
+        },
+        {
+          "key": "client_secret",
+          "label": "Client Secret",
+          "field_type": "string",
+          "required": true,
+          "secret": true,
+          "description": "OAuth secret"
+        }
+      ],
+      "sync_history": [
+        {
+          "run_id": "run_amos_401",
+          "started_at": "2026-03-12T04:10:00Z",
+          "ended_at": "2026-03-12T04:12:00Z",
+          "status": "Success",
+          "records_processed": 412
+        },
+        {
+          "run_id": "run_amos_400",
+          "started_at": "2026-03-12T04:05:00Z",
+          "ended_at": "2026-03-12T04:07:00Z",
+          "status": "Success",
+          "records_processed": 387
+        }
+      ]
+    },
+    {
+      "connector_id": "cn_sap_spares",
+      "workspace_id": "ws_skybridge",
+      "name": "SAP EWM Spares",
+      "source_category": "Inventory",
+      "status": "Healthy",
+      "sync_mode": "Incremental",
+      "deployment_target": "Hosted Worker",
+      "runtime_location": "AOG Cloud - IN",
+      "package_name": "aog-connectors.sap-ewm",
+      "version": "0.8.2",
+      "schema_version": "2026.03",
+      "health_score": 92,
+      "last_sync": "2026-03-12T04:13:00Z",
+      "next_sync": "2026-03-12T04:28:00Z",
+      "supported_entities": [
+        "spares",
+        "stock_movements",
+        "vendors"
+      ],
+      "config_fields": [
+        {
+          "key": "host",
+          "label": "SAP Host",
+          "field_type": "string",
+          "required": true,
+          "secret": false,
+          "description": "RFC or API host"
+        },
+        {
+          "key": "username",
+          "label": "Username",
+          "field_type": "string",
+          "required": true,
+          "secret": false,
+          "description": "Integration username"
+        },
+        {
+          "key": "password",
+          "label": "Password",
+          "field_type": "string",
+          "required": true,
+          "secret": true,
+          "description": "Integration password"
+        }
+      ],
+      "sync_history": [
+        {
+          "run_id": "run_sap_221",
+          "started_at": "2026-03-12T04:00:00Z",
+          "ended_at": "2026-03-12T04:01:20Z",
+          "status": "Success",
+          "records_processed": 198
+        },
+        {
+          "run_id": "run_sap_220",
+          "started_at": "2026-03-12T03:30:00Z",
+          "ended_at": "2026-03-12T03:31:11Z",
+          "status": "Success",
+          "records_processed": 201
+        }
+      ]
+    },
+    {
+      "connector_id": "cn_flight_feed",
+      "workspace_id": "ws_skybridge",
+      "name": "Flight Ops Stream",
+      "source_category": "Flight Operations",
+      "status": "Warning",
+      "sync_mode": "Streaming",
+      "deployment_target": "Hosted Worker",
+      "runtime_location": "AOG Cloud - Global",
+      "package_name": "aog-connectors.flight-ops",
+      "version": "0.7.9",
+      "schema_version": "2026.03",
+      "health_score": 74,
+      "last_sync": "2026-03-12T04:15:00Z",
+      "next_sync": "2026-03-12T04:15:30Z",
+      "supported_entities": [
+        "flights",
+        "stations",
+        "disruptions"
+      ],
+      "config_fields": [
+        {
+          "key": "provider",
+          "label": "Feed Provider",
+          "field_type": "enum",
+          "required": true,
+          "secret": false,
+          "description": "Provider name"
+        },
+        {
+          "key": "api_key",
+          "label": "API Key",
+          "field_type": "string",
+          "required": true,
+          "secret": true,
+          "description": "Provider api key"
+        }
+      ],
+      "sync_history": [
+        {
+          "run_id": "run_flt_1201",
+          "started_at": "2026-03-12T04:14:30Z",
+          "ended_at": "2026-03-12T04:15:00Z",
+          "status": "Warning",
+          "records_processed": 1289
+        },
+        {
+          "run_id": "run_flt_1200",
+          "started_at": "2026-03-12T04:14:00Z",
+          "ended_at": "2026-03-12T04:14:30Z",
+          "status": "Success",
+          "records_processed": 1295
+        }
+      ]
+    },
+    {
+      "connector_id": "cn_docs_repo",
+      "workspace_id": "ws_skybridge",
+      "name": "Engineering Document Hub",
+      "source_category": "Documents",
+      "status": "Healthy",
+      "sync_mode": "Scheduled",
+      "deployment_target": "Hosted Worker",
+      "runtime_location": "AOG Cloud - IN",
+      "package_name": "aog-connectors.doc-hub",
+      "version": "0.6.1",
+      "schema_version": "2026.03",
+      "health_score": 90,
+      "last_sync": "2026-03-12T03:45:00Z",
+      "next_sync": "2026-03-12T05:45:00Z",
+      "supported_entities": [
+        "documents",
+        "manual_chunks"
+      ],
+      "config_fields": [
+        {
+          "key": "bucket_name",
+          "label": "Bucket Name",
+          "field_type": "string",
+          "required": true,
+          "secret": false,
+          "description": "Storage bucket"
+        },
+        {
+          "key": "service_account",
+          "label": "Service Account JSON",
+          "field_type": "string",
+          "required": true,
+          "secret": true,
+          "description": "Service account payload"
+        }
+      ],
+      "sync_history": [
+        {
+          "run_id": "run_doc_088",
+          "started_at": "2026-03-12T03:44:00Z",
+          "ended_at": "2026-03-12T03:45:00Z",
+          "status": "Success",
+          "records_processed": 24
+        }
+      ]
+    },
+    {
+      "connector_id": "cn_meridian_amos",
+      "workspace_id": "ws_meridian",
+      "name": "Meridian AMOS Pilot",
+      "source_category": "Maintenance",
+      "status": "Error",
+      "sync_mode": "Incremental",
+      "deployment_target": "Airline Edge Worker",
+      "runtime_location": "DUB Connector Node",
+      "package_name": "aog-connectors.amos",
+      "version": "0.9.4",
+      "schema_version": "2026.03",
+      "health_score": 41,
+      "last_sync": "2026-03-12T03:55:00Z",
+      "next_sync": "2026-03-12T04:25:00Z",
+      "supported_entities": [
+        "defects",
+        "maintenance_logs",
+        "aircraft"
+      ],
+      "config_fields": [
+        {
+          "key": "base_url",
+          "label": "AMOS API URL",
+          "field_type": "string",
+          "required": true,
+          "secret": false,
+          "description": "Base AMOS endpoint"
+        },
+        {
+          "key": "client_id",
+          "label": "Client ID",
+          "field_type": "string",
+          "required": true,
+          "secret": false,
+          "description": "OAuth client id"
+        },
+        {
+          "key": "client_secret",
+          "label": "Client Secret",
+          "field_type": "string",
+          "required": true,
+          "secret": true,
+          "description": "OAuth secret"
+        }
+      ],
+      "sync_history": [
+        {
+          "run_id": "run_mda_011",
+          "started_at": "2026-03-12T03:50:00Z",
+          "ended_at": "2026-03-12T03:55:00Z",
+          "status": "Error",
+          "records_processed": 0
+        }
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "alert_id": "alt_001",
+      "workspace_id": "ws_skybridge",
+      "title": "Repeat auto-flight disconnect cluster",
+      "alert_type": "Repeat Defect Cluster",
+      "severity": "High",
+      "status": "Open",
+      "triggered_at": "2026-03-12T03:58:00Z",
+      "owner": "Rahul Menon",
+      "aircraft_reference": "VT-SXA",
+      "component": "Autopilot Computer",
+      "station": "DEL",
+      "summary": "Three similar ATA 22 events within 14 days on the same aircraft.",
+      "source_event_type": "defect_repeat",
+      "risk_score": 82.4
+    },
+    {
+      "alert_id": "alt_002",
+      "workspace_id": "ws_skybridge",
+      "title": "Hydraulic power material risk",
+      "alert_type": "Material Exposure",
+      "severity": "Critical",
+      "status": "In Review",
+      "triggered_at": "2026-03-12T03:40:00Z",
+      "owner": "Priya Singh",
+      "aircraft_reference": "Fleet-wide",
+      "component": "Hydraulic Pump Control Valve",
+      "station": "HYD",
+      "summary": "Projected 72-hour demand exceeds available stock by 3 units.",
+      "source_event_type": "spares_threshold",
+      "risk_score": 91.0
+    },
+    {
+      "alert_id": "alt_003",
+      "workspace_id": "ws_skybridge",
+      "title": "Line disruption near BOM arrivals",
+      "alert_type": "Disruption Watch",
+      "severity": "Medium",
+      "status": "Open",
+      "triggered_at": "2026-03-12T04:05:00Z",
+      "owner": "Ekta Rao",
+      "aircraft_reference": "Inbound Wave",
+      "component": "Network Operations",
+      "station": "BOM",
+      "summary": "Three inbound flights with delayed technical arrivals and tight onward rotations.",
+      "source_event_type": "flight_disruption",
+      "risk_score": 68.8
+    },
+    {
+      "alert_id": "alt_004",
+      "workspace_id": "ws_meridian",
+      "title": "Connector authentication failure",
+      "alert_type": "Connector Health",
+      "severity": "High",
+      "status": "Open",
+      "triggered_at": "2026-03-12T03:56:00Z",
+      "owner": "Saoirse Flynn",
+      "aircraft_reference": "Meridian AMOS Pilot",
+      "component": "Connector Runtime",
+      "station": "DUB",
+      "summary": "AMOS edge connector could not refresh OAuth token during the last sync window.",
+      "source_event_type": "connector_failure",
+      "risk_score": 77.1
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "cas_1001",
+      "workspace_id": "ws_skybridge",
+      "title": "ATA 22 recurrence investigation - VT-SXA",
+      "priority": "High",
+      "status": "Active",
+      "owner": "Rahul Menon",
+      "sla_due": "2026-03-12T08:30:00Z",
+      "created_at": "2026-03-12T04:00:00Z",
+      "updated_at": "2026-03-12T04:11:00Z",
+      "linked_alert_count": 2,
+      "aircraft_reference": "VT-SXA",
+      "category": "Reliability",
+      "timeline": [
+        {
+          "entry_id": "tl_1",
+          "timestamp": "2026-03-12T04:00:00Z",
+          "actor": "System",
+          "entry_type": "Alert Linked",
+          "message": "Repeat auto-flight disconnect cluster linked to case."
+        },
+        {
+          "entry_id": "tl_2",
+          "timestamp": "2026-03-12T04:06:00Z",
+          "actor": "Rahul Menon",
+          "entry_type": "Investigation Update",
+          "message": "Pulled prior ATA 22 history and vendor bulletin references."
+        },
+        {
+          "entry_id": "tl_3",
+          "timestamp": "2026-03-12T04:11:00Z",
+          "actor": "Ekta Rao",
+          "entry_type": "Coordination",
+          "message": "Requested next-arrival troubleshooting slot at DEL line control."
+        }
+      ]
+    },
+    {
+      "case_id": "cas_1002",
+      "workspace_id": "ws_skybridge",
+      "title": "Hydraulic valve reorder and cannibalization review",
+      "priority": "Critical",
+      "status": "Escalated",
+      "owner": "Priya Singh",
+      "sla_due": "2026-03-12T06:00:00Z",
+      "created_at": "2026-03-12T03:42:00Z",
+      "updated_at": "2026-03-12T04:09:00Z",
+      "linked_alert_count": 1,
+      "aircraft_reference": "Fleet-wide",
+      "category": "Materials",
+      "timeline": [
+        {
+          "entry_id": "tl_4",
+          "timestamp": "2026-03-12T03:42:00Z",
+          "actor": "System",
+          "entry_type": "Case Created",
+          "message": "Material exposure case raised from spares threshold breach."
+        },
+        {
+          "entry_id": "tl_5",
+          "timestamp": "2026-03-12T03:58:00Z",
+          "actor": "Priya Singh",
+          "entry_type": "Action",
+          "message": "Raised immediate supplier pull request and checked cross-station availability."
+        },
+        {
+          "entry_id": "tl_6",
+          "timestamp": "2026-03-12T04:09:00Z",
+          "actor": "Dev Malhotra",
+          "entry_type": "Escalation",
+          "message": "Escalated to materials duty manager because vendor lead time exceeds dispatch window."
+        }
+      ]
+    },
+    {
+      "case_id": "cas_1003",
+      "workspace_id": "ws_skybridge",
+      "title": "Morning shift handover - disruption watch",
+      "priority": "Medium",
+      "status": "Monitoring",
+      "owner": "Ekta Rao",
+      "sla_due": "2026-03-12T10:15:00Z",
+      "created_at": "2026-03-12T04:05:00Z",
+      "updated_at": "2026-03-12T04:13:00Z",
+      "linked_alert_count": 1,
+      "aircraft_reference": "Inbound Wave",
+      "category": "Network",
+      "timeline": [
+        {
+          "entry_id": "tl_7",
+          "timestamp": "2026-03-12T04:05:00Z",
+          "actor": "System",
+          "entry_type": "Case Created",
+          "message": "Network disruption case raised for inbound technical arrival wave."
+        },
+        {
+          "entry_id": "tl_8",
+          "timestamp": "2026-03-12T04:13:00Z",
+          "actor": "Ekta Rao",
+          "entry_type": "Handover Note",
+          "message": "Need station readiness check for two tight-turn aircraft inbound to BOM."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_id": "evt_9001",
+      "workspace_id": "ws_skybridge",
+      "event_type": "defect_repeat",
+      "severity": "High",
+      "title": "ATA 22 repeat defect threshold exceeded",
+      "created_at": "2026-03-12T03:57:00Z",
+      "source_connector": "AMOS M&E Core",
+      "status": "Processed"
+    },
+    {
+      "event_id": "evt_9002",
+      "workspace_id": "ws_skybridge",
+      "event_type": "spares_threshold",
+      "severity": "Critical",
+      "title": "Hydraulic valve stock below projected demand",
+      "created_at": "2026-03-12T03:40:00Z",
+      "source_connector": "SAP EWM Spares",
+      "status": "Processed"
+    },
+    {
+      "event_id": "evt_9003",
+      "workspace_id": "ws_skybridge",
+      "event_type": "flight_disruption",
+      "severity": "Medium",
+      "title": "Inbound rotation pressure on BOM arrival bank",
+      "created_at": "2026-03-12T04:05:00Z",
+      "source_connector": "Flight Ops Stream",
+      "status": "Processed"
+    },
+    {
+      "event_id": "evt_9004",
+      "workspace_id": "ws_meridian",
+      "event_type": "connector_failure",
+      "severity": "High",
+      "title": "Meridian connector auth refresh failure",
+      "created_at": "2026-03-12T03:55:00Z",
+      "source_connector": "Meridian AMOS Pilot",
+      "status": "Open"
+    }
+  ],
+  "network": [
+    {
+      "workspace_id": "ws_skybridge",
+      "layers": [
+        {
+          "layer_id": "owned_fleet",
+          "label": "Owned Fleet",
+          "enabled_default": true,
+          "feature_count": 6,
+          "status": "Healthy",
+          "description": "Connected airline aircraft positions and operational state."
+        },
+        {
+          "layer_id": "maintenance_bases",
+          "label": "Maintenance Bases",
+          "enabled_default": true,
+          "feature_count": 4,
+          "status": "Healthy",
+          "description": "Line and engineering support locations."
+        },
+        {
+          "layer_id": "hotspots",
+          "label": "Disruption Hotspots",
+          "enabled_default": true,
+          "feature_count": 3,
+          "status": "Warning",
+          "description": "Congestion and disruption watch zones."
+        },
+        {
+          "layer_id": "watch_aircraft",
+          "label": "Watch Aircraft",
+          "enabled_default": true,
+          "feature_count": 3,
+          "status": "Healthy",
+          "description": "Aircraft with elevated engineering risk or active monitoring."
+        }
+      ],
+      "owned_fleet": [
+        {
+          "overlay_id": "of_1",
+          "aircraft_id": "SKY001",
+          "tail_number": "VT-SXA",
+          "aircraft_type": "A320neo",
+          "callsign": "SBX201",
+          "latitude": 28.43,
+          "longitude": 77.12,
+          "status": "Dispatch Watch",
+          "risk_score": 84.2,
+          "station": "DEL"
+        },
+        {
+          "overlay_id": "of_2",
+          "aircraft_id": "SKY002",
+          "tail_number": "VT-SXB",
+          "aircraft_type": "A321neo",
+          "callsign": "SBX118",
+          "latitude": 19.09,
+          "longitude": 72.87,
+          "status": "Active",
+          "risk_score": 51.8,
+          "station": "BOM"
+        },
+        {
+          "overlay_id": "of_3",
+          "aircraft_id": "SKY003",
+          "tail_number": "VT-SXC",
+          "aircraft_type": "B787-8",
+          "callsign": "SBX603",
+          "latitude": 12.98,
+          "longitude": 77.59,
+          "status": "Maintenance Hold",
+          "risk_score": 92.6,
+          "station": "BLR"
+        },
+        {
+          "overlay_id": "of_4",
+          "aircraft_id": "SKY004",
+          "tail_number": "VT-SXD",
+          "aircraft_type": "A320neo",
+          "callsign": "SBX227",
+          "latitude": 17.44,
+          "longitude": 78.38,
+          "status": "Active",
+          "risk_score": 43.9,
+          "station": "HYD"
+        },
+        {
+          "overlay_id": "of_5",
+          "aircraft_id": "SKY005",
+          "tail_number": "VT-SXE",
+          "aircraft_type": "A321neo",
+          "callsign": "SBX410",
+          "latitude": 13.08,
+          "longitude": 80.27,
+          "status": "Dispatch Watch",
+          "risk_score": 73.5,
+          "station": "MAA"
+        },
+        {
+          "overlay_id": "of_6",
+          "aircraft_id": "SKY006",
+          "tail_number": "VT-SXF",
+          "aircraft_type": "B787-8",
+          "callsign": "SBX701",
+          "latitude": 25.25,
+          "longitude": 55.36,
+          "status": "Active",
+          "risk_score": 48.7,
+          "station": "DXB"
+        }
+      ],
+      "maintenance_bases": [
+        {
+          "base_id": "base_del",
+          "name": "Delhi Engineering Control",
+          "iata_code": "DEL",
+          "latitude": 28.5562,
+          "longitude": 77.1,
+          "open_cases": 3,
+          "active_alerts": 2
+        },
+        {
+          "base_id": "base_bom",
+          "name": "Mumbai Line Maintenance",
+          "iata_code": "BOM",
+          "latitude": 19.0896,
+          "longitude": 72.8656,
+          "open_cases": 2,
+          "active_alerts": 1
+        },
+        {
+          "base_id": "base_blr",
+          "name": "Bengaluru Reliability Cell",
+          "iata_code": "BLR",
+          "latitude": 13.1986,
+          "longitude": 77.7066,
+          "open_cases": 1,
+          "active_alerts": 1
+        },
+        {
+          "base_id": "base_hyd",
+          "name": "Hyderabad Spares Center",
+          "iata_code": "HYD",
+          "latitude": 17.2403,
+          "longitude": 78.4294,
+          "open_cases": 2,
+          "active_alerts": 1
+        }
+      ],
+      "hotspots": [
+        {
+          "hotspot_id": "hot_1",
+          "label": "BOM inbound bank pressure",
+          "latitude": 19.2,
+          "longitude": 72.9,
+          "severity": "High",
+          "open_alerts": 3,
+          "reason": "Tight-turn aircraft arrivals with technical delays."
+        },
+        {
+          "hotspot_id": "hot_2",
+          "label": "DEL ATA 22 recurrence watch",
+          "latitude": 28.5,
+          "longitude": 77.25,
+          "severity": "Medium",
+          "open_alerts": 2,
+          "reason": "Repeat auto-flight cluster on one narrowbody tail."
+        },
+        {
+          "hotspot_id": "hot_3",
+          "label": "HYD material exposure node",
+          "latitude": 17.36,
+          "longitude": 78.45,
+          "severity": "Critical",
+          "open_alerts": 2,
+          "reason": "Hydraulic valve shortage and cannibalization risk."
+        }
+      ]
+    },
+    {
+      "workspace_id": "ws_meridian",
+      "layers": [
+        {
+          "layer_id": "owned_fleet",
+          "label": "Owned Fleet",
+          "enabled_default": true,
+          "feature_count": 2,
+          "status": "Healthy",
+          "description": "Pilot fleet visibility."
+        },
+        {
+          "layer_id": "maintenance_bases",
+          "label": "Maintenance Bases",
+          "enabled_default": true,
+          "feature_count": 2,
+          "status": "Healthy",
+          "description": "Engineering support locations."
+        },
+        {
+          "layer_id": "hotspots",
+          "label": "Disruption Hotspots",
+          "enabled_default": false,
+          "feature_count": 1,
+          "status": "Warning",
+          "description": "Pilot disruption watch overlay."
+        }
+      ],
+      "owned_fleet": [
+        {
+          "overlay_id": "mda_1",
+          "aircraft_id": "MDA001",
+          "tail_number": "EI-MDA",
+          "aircraft_type": "A321",
+          "callsign": "MDA121",
+          "latitude": 51.47,
+          "longitude": -0.45,
+          "status": "Active",
+          "risk_score": 44.0,
+          "station": "LHR"
+        },
+        {
+          "overlay_id": "mda_2",
+          "aircraft_id": "MDA002",
+          "tail_number": "EI-MDB",
+          "aircraft_type": "B787-9",
+          "callsign": "MDA401",
+          "latitude": 53.42,
+          "longitude": -6.27,
+          "status": "Dispatch Watch",
+          "risk_score": 71.2,
+          "station": "DUB"
+        }
+      ],
+      "maintenance_bases": [
+        {
+          "base_id": "base_lhr",
+          "name": "London Ops Center",
+          "iata_code": "LHR",
+          "latitude": 51.47,
+          "longitude": -0.4543,
+          "open_cases": 1,
+          "active_alerts": 1
+        },
+        {
+          "base_id": "base_dub",
+          "name": "Dublin Reliability Desk",
+          "iata_code": "DUB",
+          "latitude": 53.4213,
+          "longitude": -6.2701,
+          "open_cases": 1,
+          "active_alerts": 1
+        }
+      ],
+      "hotspots": [
+        {
+          "hotspot_id": "mda_hot_1",
+          "label": "Connector pilot instability",
+          "latitude": 53.4,
+          "longitude": -6.25,
+          "severity": "High",
+          "open_alerts": 1,
+          "reason": "Maintenance connector pilot has repeated auth failures."
+        }
+      ]
+    }
+  ]
+}

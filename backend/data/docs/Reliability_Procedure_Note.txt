@@ -1,0 +1,23 @@
+Repeat Defect Definition
+
+A repeat defect exists when the same aircraft experiences the same component fault, or a defect in the same ATA chapter, within the preceding thirty days. Reliability analysts should distinguish repeated troubleshooting from independent events.
+
+Escalation Threshold
+
+Three similar defects on one aircraft within sixty days should be presented at the fleet reliability review with engineering action owner, open tasks, and material support status.
+
+Vendor Monitoring
+
+Track component and vendor concentrations separately. A high component count with dispersed vendors indicates system susceptibility, while one vendor concentration suggests supply quality or modification effectiveness issues.
+
+Rectification Performance
+
+Mean rectification time should be reviewed alongside AOG count because low closure time on non-dispatch items can hide poor operational impact from a smaller number of severe events.
+
+Spares Coordination
+
+Before recommending reorder quantities, compare average monthly usage against current repeat defect activity, open deferred items, and lead-time exposure for critical components.
+
+Engineering Action Tracking
+
+Recommended actions should move from monitoring to escalation when severity, recurrence, and spares exposure align. Document the rationale in daily control tower handover notes.

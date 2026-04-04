@@ -1,0 +1,33 @@
+# Node / Next
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/**/*.pyc
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Env
+.env
+.env.*
+**/.env
+**/.env.*
+frontend/.env.local
+frontend/.env*.local
+backend/.env
+backend/.env*.local
+
+# Logs
+*.log
+*.pid
+
+# Runtime DB artifacts
+*.sqlite
+*.sqlite3
