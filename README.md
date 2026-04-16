@@ -52,7 +52,7 @@ AOG Sentinel closes that gap with a control plane for airline workspaces and con
 - `/admin` - workspace and platform status
 - `/login` - authentication entry point
 
-## UI Screenshots
+## UI Images
 ### 1. Secure login
 ![AOG Sentinel login](docs/screenshots/01-login.png)
 
@@ -172,37 +172,6 @@ npm install
 cp .env.example .env.local
 ```
 
-## Production-Style Local Startup
-Backend:
-```bash
-cd /Users/ssg/Desktop/AOG\ Sentinel/backend
-source .venv/bin/activate
-uvicorn app.main:app --host 127.0.0.1 --port 8000
-```
-
-Connector worker:
-```bash
-cd /Users/ssg/Desktop/AOG\ Sentinel/backend
-source .venv/bin/activate
-python -m app.workers.connector_worker
-```
-
-Frontend:
-```bash
-cd /Users/ssg/Desktop/AOG\ Sentinel/frontend
-npm run build
-npm run start -- --hostname 127.0.0.1 --port 3000
-```
-
-Make targets:
-```bash
-cd /Users/ssg/Desktop/AOG\ Sentinel
-make db-up
-make db-migrate
-make prod-build
-make prod-up
-```
-
 ## Development Mode
 Backend:
 ```bash
@@ -226,7 +195,6 @@ Set the password via `AOG_BOOTSTRAP_DEFAULT_PASSWORD` before first deploy.
 
 Do not publish or reuse bootstrap credentials across environments.
 
-## Example APIs
 ### Auth and control plane
 - `POST /auth/login`
 - `POST /auth/refresh`
@@ -276,18 +244,10 @@ Do not publish or reuse bootstrap credentials across environments.
 ## Document Search
 The document assistant loads maintenance excerpts from `manual_chunks.csv`, builds an embedding index lazily with `all-MiniLM-L6-v2`, and falls back to keyword ranking if embeddings are unavailable. That keeps the platform locally runnable even on first boot or in degraded environments.
 
-## Resume-Ready Outcomes
+## Enterprise Ready Outcomes
 - Built an airline engineering operations platform spanning fleet reliability, incident triage, spares planning, connector orchestration, alert workflow, and network intelligence using FastAPI, Next.js, TypeScript, Python, SQLAlchemy, and ML retrieval.
 - Implemented workspace-scoped auth/RBAC, persistent control-plane storage, connector manifests, sync runs, and cursor persistence to support airline integrations.
 - Designed a dense flight-network workspace with owned-fleet overlays, maintenance bases, airport congestion, derived traffic corridors, and a Cesium-backed 3D operational view.
-
-## Future Roadmap
-- SSO/SAML and enterprise identity federation
-- Persistent normalized operational data lake beyond bootstrap CSV inputs
-- Live weather raster layers and richer airport turnaround intelligence
-- Connector packaging, signing, and remote registry distribution
-- Notification routing to email, Slack, and engineering duty channels
-- Historical network playback and route reconstruction
 
 ## Note on Data
 All airline operational data in this repository is synthetic and intended for demonstration, portfolio, and local product development purposes only.
