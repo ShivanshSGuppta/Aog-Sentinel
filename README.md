@@ -52,6 +52,19 @@ AOG Sentinel closes that gap with a control plane for airline workspaces and con
 - `/admin` - workspace and platform status
 - `/login` - authentication entry point
 
+## UI Screenshots
+### 1. Secure login
+![AOG Sentinel login](docs/screenshots/01-login.png)
+
+### 2. Fleet reliability dashboard
+![AOG Sentinel dashboard](docs/screenshots/02-dashboard.png)
+
+### 3. Network intelligence workspace
+![AOG Sentinel flights workspace](docs/screenshots/03-flights.png)
+
+### 4. Connector control plane
+![AOG Sentinel connectors](docs/screenshots/04-connectors.png)
+
 ## Architecture
 ```mermaid
 flowchart LR
