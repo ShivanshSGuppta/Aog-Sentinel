@@ -15,16 +15,22 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.453.0",
     "maplibre-gl": "^5.20.0",
-    "next": "^14.2.0",
+    "next": "15.5.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-globe.gl": "^2.37.0",
-    "react-simple-maps": "^3.0.0",
     "recharts": "^2.13.0",
     "resium": "^1.18.0",
     "tailwind-merge": "^2.5.5",
     "three": "^0.183.2",
     "world-atlas": "^2.0.2"
+  },
+  "overrides": {
+    "protobufjs": "8.0.1",
+    "picomatch": "4.0.4",
+    "lodash": "4.18.1",
+    "lodash-es": "4.18.1",
+    "dompurify": "3.4.0"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",

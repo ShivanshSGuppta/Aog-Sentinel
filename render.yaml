@@ -43,6 +43,12 @@ services:
         value: "20"
       - key: AOG_REFRESH_TOKEN_DAYS
         value: "14"
+      - key: AOG_AUTH_LOGIN_WINDOW_SECONDS
+        value: "300"
+      - key: AOG_AUTH_LOGIN_MAX_ATTEMPTS
+        value: "8"
+      - key: AOG_AUTH_LOGIN_BLOCK_SECONDS
+        value: "600"
       - key: AOG_ENABLE_API_DOCS
         value: "false"
       - key: AOG_BOOTSTRAP_PLATFORM_DATA
@@ -97,6 +103,12 @@ services:
         value: "20"
       - key: AOG_REFRESH_TOKEN_DAYS
         value: "14"
+      - key: AOG_AUTH_LOGIN_WINDOW_SECONDS
+        value: "300"
+      - key: AOG_AUTH_LOGIN_MAX_ATTEMPTS
+        value: "8"
+      - key: AOG_AUTH_LOGIN_BLOCK_SECONDS
+        value: "600"
       - key: AOG_ENABLE_API_DOCS
         value: "false"
       - key: AOG_BOOTSTRAP_PLATFORM_DATA
