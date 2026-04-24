@@ -5,32 +5,20 @@ export interface StoredSession {
   refreshExpiresAt: string;
 }
 
-const STORAGE_KEY = "aog-sentinel:session";
-
-function canUseStorage() {
-  return typeof window !== "undefined" && Boolean(window.localStorage);
-}
+let volatileSession: StoredSession | null = null;
 
 export function getStoredSession(): StoredSession | null {
-  if (!canUseStorage()) return null;
-  const raw = window.localStorage.getItem(STORAGE_KEY);
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw) as StoredSession;
-  } catch {
-    window.localStorage.removeItem(STORAGE_KEY);
-    return null;
-  }
+  return volatileSession;
 }
 
 export function setStoredSession(session: StoredSession | null) {
-  if (!canUseStorage()) return;
+  volatileSession = session;
+
+  if (typeof window === "undefined") return;
   if (!session) {
-    window.localStorage.removeItem(STORAGE_KEY);
     window.dispatchEvent(new CustomEvent("aog-auth-change", { detail: null }));
     return;
   }
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(session));
   window.dispatchEvent(new CustomEvent("aog-auth-change", { detail: session }));
 }
 
