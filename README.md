@@ -605,6 +605,9 @@ cd backend
 source .venv/bin/activate
 
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+PostgreSQL - Configured through Docker Compose
+
 ```
 
 ---
@@ -616,17 +619,6 @@ cd frontend
 
 npm run dev -- --hostname 127.0.0.1 --port 3000
 ```
-
----
-
-## 🌐 Local Endpoints
-
-| Service | URL |
-|---|---|
-| Frontend | http://127.0.0.1:3000 |
-| Backend API | http://127.0.0.1:8000 |
-| API Docs | http://127.0.0.1:8000/docs |
-| PostgreSQL | Configured through Docker Compose |
 
 ---
 
