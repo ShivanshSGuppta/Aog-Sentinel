@@ -562,6 +562,8 @@ cd aog-sentinel
 
 ```bash
 docker compose up -d postgres
+
+PostgreSQL - Configured through Docker Compose
 ```
 
 ---
@@ -605,8 +607,6 @@ cd backend
 source .venv/bin/activate
 
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-
-PostgreSQL - Configured through Docker Compose
 
 ```
 
